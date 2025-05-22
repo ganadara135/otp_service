@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Service</title>
+</head>
+<body>
+    <h2>OTP Verification</h2>
+    {% if result %}
+        <p><strong>{{ result }}</strong></p>
+    {% endif %}
+    <form method="post">
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+        <button type="submit" name="action" value="send">Send OTP</button><br><br>
+
+        <label>OTP:</label><br>
+        <input type="text" name="otp"><br><br>
+        <button type="submit" name="action" value="verify">Verify OTP</button>
+    </form>
+</body>
+</html>
